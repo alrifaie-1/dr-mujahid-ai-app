@@ -1,0 +1,13 @@
+#!/usr/bin/expect -f
+
+set timeout 30
+spawn npx expo login
+
+expect "Email or username"
+send "prof.alrifaie@gmail.com\r"
+
+expect "Password"
+send "mR@6740519\r"
+
+expect eof
+

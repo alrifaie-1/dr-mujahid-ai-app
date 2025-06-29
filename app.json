@@ -90,33 +90,12 @@
     "plugins": [
       "expo-camera",
       "expo-media-library",
-      "expo-av",
       [
         "expo-image-picker",
         {
           "photosPermission": "يحتاج التطبيق للوصول لمكتبة الصور لاختيار الصور للشهادات والمحتوى",
           "cameraPermission": "يحتاج التطبيق للوصول للكاميرا لالتقاط الصور للشهادات والمحتوى"
         }
-      ],
-      [
-        "expo-image-manipulator"
-      ],
-      [
-        "expo-notifications",
-        {
-          "icon": "./assets/notification-icon.png",
-          "color": "#ffffff",
-          "sounds": ["./assets/notification.wav"]
-        }
-      ],
-      [
-        "expo-file-system"
-      ],
-      [
-        "expo-sharing"
-      ],
-      [
-        "expo-secure-store"
       ]
     ],
     "hooks": {
@@ -124,7 +103,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "your-project-id-here"
+        "projectId": "c04ab66e-ad9e-420f-b2c0-afadeaf410ae"
       }
     },
     "owner": "alrifaie-1",
