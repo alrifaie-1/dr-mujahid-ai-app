@@ -8,8 +8,9 @@
 **الرابط:** https://github.com/alrifaie-1/dr-mujahid-ai-app
 
 #### Expo Project:
-**معرف المشروع:** c04ab66e-ad9e-420f-b2c0-afadeaf410ae
-**المالك:** alrifaie-1
+**معرف المشروع:** a3e0ebd4-9a51-4300-9a24-81e5a535b8cf
+**المالك:** alrifaie.1
+**رابط Expo Dashboard:** https://expo.dev/accounts/alrifaie.1/projects
 
 ---
 
@@ -19,7 +20,7 @@
 لتفعيل البناء التلقائي، تحتاج إلى إضافة Expo Token إلى GitHub Secrets:
 
 1. **احصل على Expo Token:**
-   - اذهب إلى https://expo.dev/accounts/alrifaie-1/settings/access-tokens
+   - اذهب إلى https://expo.dev/accounts/alrifaie.1/settings/access-tokens
    - انقر "Create Token"
    - أعط التوكن اسماً مثل "GitHub Actions"
    - انسخ التوكن
@@ -35,7 +36,7 @@
 لبناء التطبيق للمتاجر:
 
 1. **اذهب إلى Expo Dashboard:**
-   - https://expo.dev/accounts/alrifaie-1/projects/dr-mujahid-ai-app
+   - https://expo.dev/accounts/alrifaie.1/projects/dr-mujahid-ai-app
 
 2. **ربط GitHub Repository:**
    - في صفحة المشروع، انقر "Connect GitHub"
@@ -57,7 +58,7 @@
 - ستجد النتائج في GitHub Actions tab
 
 ### البناء اليدوي:
-1. اذهب إلى https://expo.dev/accounts/alrifaie-1/projects/dr-mujahid-ai-app
+1. اذهب إلى https://expo.dev/accounts/alrifaie.1/projects/dr-mujahid-ai-app
 2. انقر "Builds"
 3. انقر "Create build"
 4. اختر الإعدادات المطلوبة

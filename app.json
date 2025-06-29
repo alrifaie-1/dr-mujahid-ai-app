@@ -8,9 +8,18 @@
     "userInterfaceStyle": "automatic",
     "scheme": "dr-mujahid-ai",
     "description": "تطبيق شامل للذكاء الاصطناعي يوفر خدمات إنتاج الفيديوهات وتصميم الشهادات والمحتوى الرقمي",
-    "keywords": ["ذكاء اصطناعي", "فيديو", "شهادات", "تصميم", "محتوى رقمي"],
+    "keywords": [
+      "ذكاء اصطناعي",
+      "فيديو",
+      "شهادات",
+      "تصميم",
+      "محتوى رقمي"
+    ],
     "privacy": "public",
-    "platforms": ["ios", "android"],
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -36,7 +45,9 @@
         "CFBundleDisplayName": "د. مجاهد AI",
         "ITSAppUsesNonExemptEncryption": false
       },
-      "associatedDomains": ["applinks:dr-mujahid-ai.com"]
+      "associatedDomains": [
+        "applinks:dr-mujahid-ai.com"
+      ]
     },
     "android": {
       "adaptiveIcon": {
@@ -103,10 +114,10 @@
     },
     "extra": {
       "eas": {
-        "projectId": "c04ab66e-ad9e-420f-b2c0-afadeaf410ae"
+        "projectId": "a3e0ebd4-9a51-4300-9a24-81e5a535b8cf"
       }
     },
-    "owner": "alrifaie-1",
+    "owner": "alrifaie.1",
     "runtimeVersion": {
       "policy": "sdkVersion"
     },
@@ -115,4 +126,3 @@
     }
   }
 }
-
