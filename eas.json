@@ -17,19 +17,25 @@
       "distribution": "internal",
       "android": {
         "buildType": "apk"
+      },
+      "ios": {
+        "simulator": true
       }
     },
     "production": {
+      "distribution": "store",
       "android": {
         "buildType": "app-bundle"
       },
-      "ios": {}
+      "ios": {
+        "bundleIdentifier": "com.drmujahid.aiapp"
+      }
     }
   },
   "submit": {
     "production": {
       "android": {
-        "serviceAccountKeyPath": "./service-account-key.json",
+        "serviceAccountKeyPath": "./google-services.json",
         "track": "internal"
       },
       "ios": {
