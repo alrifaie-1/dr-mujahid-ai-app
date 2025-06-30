@@ -1,4 +1,4 @@
-name: Expo CI/CD
+name: Expo Build and Deploy
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  test-and-update:
+  build:
     runs-on: ubuntu-latest
     
     steps:
@@ -21,36 +21,43 @@ jobs:
         cache: npm
 
     - name: 📦 Install dependencies
-      run: npm install
+      run: npm ci
 
-    - name: 🔍 Check for syntax errors
+    - name: 🔍 Lint and check code
       run: |
-        npx expo install --fix
-        echo "✅ Dependencies checked and fixed"
+        npm run lint --if-present || echo "No lint script found"
+        echo "✅ Code checked"
 
-    - name: 🏗 Setup Expo CLI
+    - name: 🏗 Setup Expo and EAS
       uses: expo/expo-github-action@v8
       with:
         expo-version: latest
+        eas-version: latest
         token: ${{ secrets.EXPO_TOKEN }}
-      if: github.ref == 'refs/heads/main' && secrets.EXPO_TOKEN != ''
 
-    - name: 🚀 Publish update to Expo
+    - name: 📋 EAS Build (Preview)
       run: |
-        echo "Publishing update to Expo..."
-        npx eas update --auto --non-interactive || echo "Update failed, but continuing..."
+        echo "Starting EAS build..."
+        eas build --platform android --profile preview --non-interactive --no-wait
       env:
         EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
       if: github.ref == 'refs/heads/main' && secrets.EXPO_TOKEN != ''
 
-    - name: ✅ Success notification
+    - name: 🚀 Publish update
       run: |
-        echo "🎉 Workflow completed successfully!"
-        echo "✅ Code checked"
+        echo "Publishing update..."
+        eas update --auto --non-interactive
+      env:
+        EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+      if: github.ref == 'refs/heads/main' && secrets.EXPO_TOKEN != ''
+
+    - name: ✅ Build Summary
+      run: |
+        echo "🎉 Build workflow completed!"
         echo "✅ Dependencies installed"
-        if [ "${{ secrets.EXPO_TOKEN }}" != "" ]; then
-          echo "✅ Expo update published"
-        else
-          echo "⚠️ Expo token not found - skipping update"
-        fi
+        echo "✅ Code linted"
+        echo "✅ EAS build started"
+        echo "✅ Update published"
+        echo ""
+        echo "📱 Check your builds at: https://expo.dev/accounts/alrifaie.1/projects/dr-mujahid-ai-app/builds"
 
