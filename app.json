@@ -31,23 +31,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.drmujahid.aiapp",
-      "buildNumber": "3",
-      "requireFullScreen": false,
-      "config": {
-        "usesNonExemptEncryption": false
-      },
-      "infoPlist": {
-        "NSCameraUsageDescription": "يحتاج التطبيق للوصول للكاميرا لالتقاط الصور للشهادات والمحتوى",
-        "NSMicrophoneUsageDescription": "يحتاج التطبيق للوصول للميكروفون لتسجيل الصوت في الفيديوهات",
-        "NSPhotoLibraryUsageDescription": "يحتاج التطبيق للوصول لمكتبة الصور لاختيار الصور للشهادات والمحتوى",
-        "NSPhotoLibraryAddUsageDescription": "يحتاج التطبيق لحفظ الشهادات والمحتوى المُنشأ في مكتبة الصور",
-        "NSDocumentsFolderUsageDescription": "يحتاج التطبيق للوصول للملفات لحفظ ومشاركة الشهادات",
-        "CFBundleDisplayName": "د. مجاهد AI",
-        "ITSAppUsesNonExemptEncryption": false
-      },
-      "associatedDomains": [
-        "applinks:dr-mujahid-ai.com"
-      ]
+      "buildNumber": "3"
     },
     "android": {
       "adaptiveIcon": {
@@ -55,43 +39,7 @@
         "backgroundColor": "#1a1a2e"
       },
       "package": "com.drmujahid.aiapp",
-      "versionCode": 3,
-      "compileSdkVersion": 34,
-      "targetSdkVersion": 34,
-      "minSdkVersion": 21,
-      "permissions": [
-        "android.permission.CAMERA",
-        "android.permission.RECORD_AUDIO",
-        "android.permission.READ_EXTERNAL_STORAGE",
-        "android.permission.WRITE_EXTERNAL_STORAGE",
-        "android.permission.READ_MEDIA_IMAGES",
-        "android.permission.READ_MEDIA_VIDEO",
-        "android.permission.INTERNET",
-        "android.permission.ACCESS_NETWORK_STATE",
-        "android.permission.VIBRATE",
-        "android.permission.WAKE_LOCK"
-      ],
-      "blockedPermissions": [
-        "android.permission.ACCESS_FINE_LOCATION",
-        "android.permission.ACCESS_COARSE_LOCATION"
-      ],
-      "intentFilters": [
-        {
-          "action": "VIEW",
-          "autoVerify": true,
-          "data": [
-            {
-              "scheme": "https",
-              "host": "dr-mujahid-ai.com"
-            }
-          ],
-          "category": [
-            "BROWSABLE",
-            "DEFAULT"
-          ]
-        }
-      ],
-      "googleServicesFile": "./google-services.json"
+      "versionCode": 3
     },
     "web": {
       "favicon": "./assets/favicon.png",
@@ -101,13 +49,7 @@
     "plugins": [
       "expo-camera",
       "expo-media-library",
-      [
-        "expo-image-picker",
-        {
-          "photosPermission": "يحتاج التطبيق للوصول لمكتبة الصور لاختيار الصور للشهادات والمحتوى",
-          "cameraPermission": "يحتاج التطبيق للوصول للكاميرا لالتقاط الصور للشهادات والمحتوى"
-        }
-      ]
+      "expo-image-picker"
     ],
     "hooks": {
       "postPublish": []
