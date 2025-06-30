@@ -5,69 +5,15 @@
   "build": {
     "development": {
       "developmentClient": true,
-      "distribution": "internal",
-      "android": {
-        "gradleCommand": ":app:assembleDebug"
-      },
-      "ios": {
-        "simulator": true
-      }
+      "distribution": "internal"
     },
     "preview": {
-      "distribution": "internal",
-      "android": {
-        "buildType": "apk",
-        "gradleCommand": ":app:assembleRelease"
-      },
-      "ios": {
-        "simulator": false
-      }
+      "distribution": "internal"
     },
-    "production": {
-      "android": {
-        "buildType": "app-bundle",
-        "gradleCommand": ":app:bundleRelease"
-      },
-      "ios": {
-        "simulator": false,
-        "autoIncrement": "buildNumber"
-      }
-    },
-    "production-ios": {
-      "extends": "production",
-      "ios": {
-        "simulator": false,
-        "autoIncrement": "buildNumber",
-        "enterpriseProvisioning": "universal"
-      }
-    },
-    "production-android": {
-      "extends": "production",
-      "android": {
-        "buildType": "app-bundle",
-        "gradleCommand": ":app:bundleRelease"
-      }
-    }
+    "production": {}
   },
   "submit": {
-    "production": {
-      "android": {
-        "serviceAccountKeyPath": "./google-play-service-account.json",
-        "track": "internal",
-        "releaseStatus": "draft"
-      },
-      "ios": {
-        "appleId": "your-apple-id@example.com",
-        "ascAppId": "your-app-store-connect-app-id",
-        "appleTeamId": "your-apple-team-id"
-      }
-    },
-    "preview": {
-      "android": {
-        "track": "internal",
-        "releaseStatus": "draft"
-      }
-    }
+    "production": {}
   }
 }
 
